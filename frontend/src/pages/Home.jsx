@@ -15,18 +15,19 @@ const Home = () => {
         </div>
 
         {/* Scroll indicator */}
-        <button
-          onClick={() =>
-            document
-              .getElementById("content")
-              .scrollIntoView({ behavior: "smooth" })
-          }
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer hover:text-lime-400 transition-colors duration-300"
-        >
-          <div className="w-8 h-8 text-teal-400 text-2xl flex items-center justify-center">
+        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2">
+          <button
+            onClick={() =>
+              document
+                .getElementById("content")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            className="flex items-center justify-center w-12 h-12 text-teal-400 text-3xl animate-bounce cursor-pointer hover:text-lime-400 transition-colors duration-300 focus:outline-none bg-gray-800/50 rounded-full border border-teal-400/30 hover:border-lime-400/50"
+            aria-label="Scroll to content"
+          >
             ↓
-          </div>
-        </button>
+          </button>
+        </div>
       </section>
 
       {/* Content Section */}
